@@ -4,7 +4,7 @@ export const sequelize = new Sequelize('postgres://admin:My0pS6qNeIVErA6CFdVZnvM
   dialectOptions: {
     ssl: {
       require: true,
-      rejectUnauthorized: true
+      rejectUnauthorized: true 
     }
   }
   });

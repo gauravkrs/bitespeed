@@ -4,12 +4,11 @@ export const sequelize = new Sequelize('postgres://admin:My0pS6qNeIVErA6CFdVZnvM
   dialectOptions: {
     ssl: {
       require: true,
-      rejectUnauthorized: true 
+      rejectUnauthorized: true
     }
   }
-  });
+});
 
-  sequelize.sync().then(() => {
-    console.log('db and tables have been created')
-  })
-  
+sequelize.sync().then(() => {
+  console.log('db and tables have been created')
+})

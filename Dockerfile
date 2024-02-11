@@ -17,9 +17,4 @@ COPY . .
 RUN npm run build
 
 # Command to run the app
-CMD ["node", "dist/index.js"]
-
-docker build -t my-typescript-app .
-
-# Run your Docker container
-docker run -p 3000:3000 my-typescript-app
+CMD ["npm", "start"]

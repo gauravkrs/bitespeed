@@ -2,10 +2,10 @@
 FROM node:14
 
 # Set the working directory
-WORKDIR /usr/src/index
+WORKDIR src/index
 
 # Copy package.json and package-lock.json
-COPY package*.json ./
+COPY package.json ./
 
 # Install any dependencies
 RUN npm install
@@ -15,6 +15,8 @@ COPY . .
 
 # Compile TypeScript to JavaScript
 RUN npm run build
+
+EXPOSE 3005
 
 # Command to run the app
 CMD ["npm", "start"]
